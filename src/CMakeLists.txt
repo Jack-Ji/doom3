@@ -780,16 +780,16 @@ if(CORE)
 endif()
 
 if(DEDICATED)
-	add_executable(dhewm3ded WIN32 MACOSX_BUNDLE
+	add_executable(doom3ded WIN32 MACOSX_BUNDLE
 		${src_core}
 		${src_stub_openal}
 		${src_stub_gl}
 		${src_sys_base}
 	)
 
-	set_target_properties(dhewm3ded PROPERTIES COMPILE_DEFINITIONS "ID_DEDICATED;__DOOM_DLL__")
-	set_target_properties(dhewm3ded PROPERTIES LINK_FLAGS "${ldflags}")
-	target_link_libraries(dhewm3ded
+	set_target_properties(doom3ded PROPERTIES COMPILE_DEFINITIONS "ID_DEDICATED;__DOOM_DLL__")
+	set_target_properties(doom3ded PROPERTIES LINK_FLAGS "${ldflags}")
+	target_link_libraries(doom3ded
 		idlib
 		${VORBISFILE_LIBRARIES}
 		${VORBIS_LIBRARIES}
@@ -801,7 +801,7 @@ if(DEDICATED)
 	)
 
 	if(NOT APPLE AND NOT WIN32)
-		install(TARGETS dhewm3ded
+		install(TARGETS doom3ded
 				RUNTIME DESTINATION "${bindir}"
 				LIBRARY DESTINATION "${libdir}"
 				ARCHIVE DESTINATION "${libdir}"

@@ -1,5 +1,5 @@
 /* GIMP RGBA C-Source image dump (doom_icon.c) */
-// generated from dhewm3/neo/sys/win32/rc/res/doom.ico
+// generated from doom3/src/sys/win32/rc/res/doom.ico
 
 static const struct {
   unsigned int 	 width;
