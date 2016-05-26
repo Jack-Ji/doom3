@@ -1,9 +1,7 @@
 # ABOUT
 
-This is a _Doom 3_ GPL source port, know to work on at least Windows, Linux, Mac OS X and FreeBSD.
-
-The goal of is bring _DOOM 3_ with the help of SDL to all suitable platforms.
-
+This is an enhanced version of _Doom 3_ GPL source port. I forked it for the purpose of study.
+For more details, please checkout the original repo: https://github.com/dhewm.
 
 # CHANGES
 
@@ -66,37 +64,13 @@ For Windows there are two options:
 - Compile these libraries yourself
 
 Create a distinct build folder outside of this source repository and issue
-the cmake command there, pointing it at the neo/ folder from this repository:
+the cmake command there, pointing it at the src/ folder from this repository:
 
-`cmake /path/to/repository/neo`
+`cmake /path/to/repository/src`
 
 OSX users need to point cmake at OpenAL Soft (better solutions welcome):
 
-`cmake -DOPENAL_LIBRARY=/usr/local/opt/openal-soft/lib/libopenal.dylib -DOPENAL_INCLUDE_DIR=/usr/local/opt/openal-soft/include /path/to/repository/neo`
-
-## Cross compiling
-
-For cross compiling a CMake Toolchain file is required.
-
-For the mingw-w64 toolchain "i686-w64-mingw32" on Ubuntu precise it looks like:
-
-```
-set(CMAKE_SYSTEM_NAME Windows)
-set(CMAKE_SYSTEM_PROCESSOR i686)
-
-set(CMAKE_C_COMPILER i686-w64-mingw32-gcc)
-set(CMAKE_CXX_COMPILER i686-w64-mingw32-g++)
-set(CMAKE_RC_COMPILER i686-w64-mingw32-windres)
-
-set(CMAKE_FIND_ROOT_PATH /usr/i686-w64-mingw32)
-
-set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
-set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
-set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
-```
-
-Then point CMake at your Toolchain file:
-`cmake -DCMAKE_TOOLCHAIN_FILE=/path/to/Toolchain.cmake -DDHEWM3LIBS=/path/to/dhewm3-libs/i686-w64-mingw32 /path/to/repository/neo`
+`cmake -DOPENAL_LIBRARY=/usr/local/opt/openal-soft/lib/libopenal.dylib -DOPENAL_INCLUDE_DIR=/usr/local/opt/openal-soft/include /path/to/repository/src`
 
 ## Back End Rendering of Stencil Shadows
 
@@ -125,7 +99,7 @@ EXCLUDED CODE:  The code described below and contained in the Doom 3 GPL Source 
 
 ## PropTree
 
-neo/tools/common/PropTree/*
+src/tools/common/PropTree/*
 
 Copyright (C) 1998-2001 Scott Ramsay
 
@@ -147,7 +121,7 @@ useful.
 
 ## Base64 implementation
 
-neo/idlib/Base64.cpp
+src/idlib/Base64.cpp
 
 Copyright (c) 1996 Lars Wirzenius.  All rights reserved.
 
@@ -211,7 +185,7 @@ freely, subject to the following restrictions:
 
 ## MD4 Message-Digest Algorithm
 
-neo/idlib/hashing/MD4.cpp
+src/idlib/hashing/MD4.cpp
 
 Copyright (C) 1991-2, RSA Data Security, Inc. Created 1991. All
 rights reserved.
@@ -236,7 +210,7 @@ documentation and/or software.
 
 ## MD5 Message-Digest Algorithm
 
-neo/idlib/hashing/MD5.cpp
+src/idlib/hashing/MD5.cpp
 
 This code implements the MD5 message-digest algorithm.
 The algorithm is due to Ron Rivest.  This code was
@@ -245,13 +219,13 @@ This code is in the public domain; do with it what you wish.
 
 ## CRC32 Checksum
 
-neo/idlib/hashing/CRC32.cpp
+src/idlib/hashing/CRC32.cpp
 
 Copyright (C) 1995-1998 Mark Adler
 
 ## Brandelf utility
 
-neo/sys/linux/setup/brandelf.c
+src/sys/linux/setup/brandelf.c
 
 Copyright (c) 1996 Søren Schmidt
 All rights reserved.
@@ -283,6 +257,6 @@ $FreeBSD: src/usr.bin/brandelf/brandelf.c,v 1.16 2000/07/02 03:34:08 imp Exp $
 
 ## makeself - Make self-extractable archives on Unix
 
-neo/sys/linux/setup/makeself/*, neo/sys/linux/setup/makeself/README
+src/sys/linux/setup/makeself/*, src/sys/linux/setup/makeself/README
 Copyright (c) Stéphane Peter
 Licensing: GPL v2

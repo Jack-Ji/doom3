@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
-project(dhewm3)
+project(doom3)
 
 # TODO
 
@@ -72,7 +72,7 @@ if(NOT CMAKE_BUILD_TYPE)
 	set(CMAKE_BUILD_TYPE "RelWithDebInfo")
 endif()
 
-# precompiled libraries from the dhewm3-libs repo
+# precompiled libraries from the doom3-libs repo
 if(DHEWM3LIBS)
 	if(CMAKE_CROSSCOMPILING)
 		set(CMAKE_FIND_ROOT_PATH ${DHEWM3LIBS})
@@ -268,8 +268,8 @@ if(GNUINSTALLDIRS MATCHES "NOTFOUND")
 endif()
 
 set(bindir		"${CMAKE_INSTALL_FULL_BINDIR}")
-set(libdir		"${CMAKE_INSTALL_FULL_LIBDIR}/dhewm3")
-set(datadir		"${CMAKE_INSTALL_FULL_DATADIR}/dhewm3")
+set(libdir		"${CMAKE_INSTALL_FULL_LIBDIR}/doom3")
+set(datadir		"${CMAKE_INSTALL_FULL_DATADIR}/doom3")
 
 configure_file(
 	"${CMAKE_SOURCE_DIR}/config.h.in"
@@ -702,7 +702,7 @@ if(APPLE)
 	)
 elseif(WIN32)
 	set(WIN32_RESOURCE_FILES
-		"${CMAKE_SOURCE_DIR}/sys/win32/rc/dhewm3.rc"
+		"${CMAKE_SOURCE_DIR}/sys/win32/rc/doom3.rc"
 	)
 
 	set(src_sys_base
@@ -747,17 +747,17 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_COMPILER_ID STREQUAL "Clang" AND NOT MINGW
 endif()
 
 if(CORE)
-	add_executable(dhewm3 WIN32 MACOSX_BUNDLE
+	add_executable(doom3 WIN32 MACOSX_BUNDLE
 		${src_core}
 		${src_sys_base}
 		${src_sys_core}
 	)
 
-	set_target_properties(dhewm3 PROPERTIES COMPILE_DEFINITIONS "__DOOM_DLL__")
-	set_target_properties(dhewm3 PROPERTIES LINK_FLAGS "${ldflags}")
-	set_target_properties(dhewm3 PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/sys/osx/Info.plist)
+	set_target_properties(doom3 PROPERTIES COMPILE_DEFINITIONS "__DOOM_DLL__")
+	set_target_properties(doom3 PROPERTIES LINK_FLAGS "${ldflags}")
+	set_target_properties(doom3 PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/sys/osx/Info.plist)
 
-	target_link_libraries(dhewm3
+	target_link_libraries(doom3
 		idlib
 		${OPENAL_LIBRARY}
 		${OGG_LIBRARIES}
@@ -771,7 +771,7 @@ if(CORE)
 	)
 
 	if(NOT APPLE AND NOT WIN32)
-		install(TARGETS dhewm3
+		install(TARGETS doom3
 				RUNTIME DESTINATION "${bindir}"
 				LIBRARY DESTINATION "${libdir}"
 				ARCHIVE DESTINATION "${libdir}"
