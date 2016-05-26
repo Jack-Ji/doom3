@@ -1,14 +1,13 @@
 # ABOUT
 
-_dhewm 3_ is a _Doom 3_ GPL source port, know to work on at least Windows, Linux, Mac OS X and FreeBSD.
+This is a _Doom 3_ GPL source port, know to work on at least Windows, Linux, Mac OS X and FreeBSD.
 
-The goal of _dhewm 3_ is bring _DOOM 3_ with the help of SDL to all suitable
-platforms.
+The goal of is bring _DOOM 3_ with the help of SDL to all suitable platforms.
 
 
 # CHANGES
 
-Compared to the original _DOOM 3_, the changes of _dhewm 3_ worth mentioning are:
+Compared to the original _DOOM 3_, the changes worth mentioning are:
 
 - 64bit port
 - SDL for low level OS support, OpenGL and input handling
