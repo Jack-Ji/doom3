@@ -5,17 +5,6 @@ _dhewm 3_ is a _Doom 3_ GPL source port, know to work on at least Windows, Linux
 The goal of _dhewm 3_ is bring _DOOM 3_ with the help of SDL to all suitable
 platforms.
 
-Bugs present in the original _DOOM 3_ will be fixed (when identified) without
-altering the original gameplay.
-
-**The project is hosted at:** https://github.com/dhewm
-
-**Download latest Release:** https://github.com/dhewm/dhewm3/releases/latest
-
-**Consult the FAQ at:** https://github.com/dhewm/dhewm3/wiki/FAQ
-
-**Report bugs here:** https://github.com/dhewm/dhewm3/issues
-
 
 # CHANGES
 
@@ -85,23 +74,6 @@ the cmake command there, pointing it at the neo/ folder from this repository:
 OSX users need to point cmake at OpenAL Soft (better solutions welcome):
 
 `cmake -DOPENAL_LIBRARY=/usr/local/opt/openal-soft/lib/libopenal.dylib -DOPENAL_INCLUDE_DIR=/usr/local/opt/openal-soft/include /path/to/repository/neo`
-
-## Using the provided Windows binaries
-
-Get a clone of the latest binaries here: https://github.com/dhewm/dhewm3-libs
-
-There are two subfolders:
-
-- 32bit binaries are located in "i686-w64-mingw32"
-- 64bit binaries are located in "x86_64-w64-mingw32"
-
-Issue the appropriate command from the build folder, for example:
-
-`cmake -G "Visual Studio 10" -DDHEWM3LIBS=/path/to/dhewm3-libs/i686-w64-mingw32 /path/to/repository/neo`
-
-`cmake -G "MinGW Makefiles" -DDHEWM3LIBS=/path/to/dhewm3-libs/x86_64-w64-mingw32 /path/to/repository/neo`
-
-The binaries are compatible with mingw-w64 and all MSVC versions.
 
 ## Cross compiling
 
