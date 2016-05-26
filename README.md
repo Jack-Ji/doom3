@@ -64,13 +64,13 @@ For Windows there are two options:
 - Compile these libraries yourself
 
 Create a distinct build folder outside of this source repository and issue
-the cmake command there, pointing it at the src/ folder from this repository:
+the cmake command there, pointing it at the neo/ folder from this repository:
 
-`cmake /path/to/repository/src`
+`cmake /path/to/repository/neo`
 
 OSX users need to point cmake at OpenAL Soft (better solutions welcome):
 
-`cmake -DOPENAL_LIBRARY=/usr/local/opt/openal-soft/lib/libopenal.dylib -DOPENAL_INCLUDE_DIR=/usr/local/opt/openal-soft/include /path/to/repository/src`
+`cmake -DOPENAL_LIBRARY=/usr/local/opt/openal-soft/lib/libopenal.dylib -DOPENAL_INCLUDE_DIR=/usr/local/opt/openal-soft/include /path/to/repository/neo`
 
 ## Back End Rendering of Stencil Shadows
 
@@ -99,7 +99,7 @@ EXCLUDED CODE:  The code described below and contained in the Doom 3 GPL Source 
 
 ## PropTree
 
-src/tools/common/PropTree/*
+neo/tools/common/PropTree/*
 
 Copyright (C) 1998-2001 Scott Ramsay
 
@@ -121,7 +121,7 @@ useful.
 
 ## Base64 implementation
 
-src/idlib/Base64.cpp
+neo/idlib/Base64.cpp
 
 Copyright (c) 1996 Lars Wirzenius.  All rights reserved.
 
@@ -157,7 +157,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 ## IO on .zip files using minizip
 
-src/framework/minizip/*
+neo/framework/minizip/*
 
 Copyright (C) 1998-2010 Gilles Vollant (minizip) ( http://www.winimage.com/zLibDll/minizip.html )
 
@@ -185,7 +185,7 @@ freely, subject to the following restrictions:
 
 ## MD4 Message-Digest Algorithm
 
-src/idlib/hashing/MD4.cpp
+neo/idlib/hashing/MD4.cpp
 
 Copyright (C) 1991-2, RSA Data Security, Inc. Created 1991. All
 rights reserved.
@@ -210,7 +210,7 @@ documentation and/or software.
 
 ## MD5 Message-Digest Algorithm
 
-src/idlib/hashing/MD5.cpp
+neo/idlib/hashing/MD5.cpp
 
 This code implements the MD5 message-digest algorithm.
 The algorithm is due to Ron Rivest.  This code was
@@ -219,13 +219,13 @@ This code is in the public domain; do with it what you wish.
 
 ## CRC32 Checksum
 
-src/idlib/hashing/CRC32.cpp
+neo/idlib/hashing/CRC32.cpp
 
 Copyright (C) 1995-1998 Mark Adler
 
 ## Brandelf utility
 
-src/sys/linux/setup/brandelf.c
+neo/sys/linux/setup/brandelf.c
 
 Copyright (c) 1996 Søren Schmidt
 All rights reserved.
@@ -253,10 +253,10 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-$FreeBSD: src/usr.bin/brandelf/brandelf.c,v 1.16 2000/07/02 03:34:08 imp Exp $
+$FreeBSD: neo/usr.bin/brandelf/brandelf.c,v 1.16 2000/07/02 03:34:08 imp Exp $
 
 ## makeself - Make self-extractable archives on Unix
 
-src/sys/linux/setup/makeself/*, src/sys/linux/setup/makeself/README
+neo/sys/linux/setup/makeself/*, neo/sys/linux/setup/makeself/README
 Copyright (c) Stéphane Peter
 Licensing: GPL v2
